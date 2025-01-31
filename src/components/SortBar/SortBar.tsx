@@ -4,11 +4,10 @@ import React, { useId } from 'react';
 import {
   useNotesManagerAppDispatch,
   useNotesManagerAppSelector,
-  addSort,
-  resetSort,
-  selectSort,
-} from './redux';
-import { I_Note, E_Sort } from '../../types';
+} from '../../redux/store';
+import { addSort, resetSort } from '../../redux/sortBar/sortBarSlice';
+import { selectSort } from '../../redux/sortBar/sortBarSelectors';
+import { E_Sort } from '../../types';
 
 const SortBar = React.memo(() => {
   const dispatch = useNotesManagerAppDispatch();
