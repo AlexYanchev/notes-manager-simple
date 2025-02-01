@@ -1,10 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import sortSliceReducer from './sortBar/sortBarSlice';
+import searchDataReducer from './searchData/searchDataSlice';
+import notesReducer from './notes/notesSlice';
+import categoriesReducer from './categories/categoriesSlice';
 
 export const storeNotesManager = configureStore({
   reducer: {
     sortStore: sortSliceReducer,
+    searchDataStore: searchDataReducer,
+    notes: notesReducer,
+    categories: categoriesReducer,
   },
 });
 
