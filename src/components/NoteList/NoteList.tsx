@@ -1,7 +1,8 @@
 // NoteList.tsx
 
 import React, { FC, useCallback, useMemo } from 'react';
-import { I_Note, E_Sort } from '../../types/';
+import { I_Note } from '../../types/I_Note';
+import { E_Sort } from '../../types/E_Sort';
 import Note from '../Note/Note';
 import {
   useNotesManagerAppDispatch,

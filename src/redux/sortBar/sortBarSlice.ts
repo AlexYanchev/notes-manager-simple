@@ -1,5 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { E_Sort } from '../../types';
+import { E_Sort } from '../../types/E_Sort';
 
 export interface SortState {
   sort: E_Sort | null;

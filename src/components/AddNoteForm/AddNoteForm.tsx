@@ -1,7 +1,7 @@
 // AddNoteForm.tsx
 
 import React, { FC, useId, useState } from 'react';
-import { I_Note } from '../../types';
+import { I_Note } from '../../types/I_Note';
 import {
   useNotesManagerAppDispatch,
   useNotesManagerAppSelector,

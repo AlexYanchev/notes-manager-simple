@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { I_Note } from '../../types';
+import { I_Note } from '../../types/I_Note';
 
 export interface NotesState {
   notes: I_Note[];

@@ -1,7 +1,7 @@
 // Note.tsx
 
 import React, { FC, useRef } from 'react';
-import type { I_Note } from '../../types';
+import type { I_Note } from '../../types/I_Note';
 import NoteText from '../NoteText/NoteText';
 import { useNotesManagerAppDispatch } from '../../redux/store';
 import { deleteNote } from '../../redux/notes/notesSlice';

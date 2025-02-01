@@ -7,7 +7,7 @@ import {
 } from '../../redux/store';
 import { addSort, resetSort } from '../../redux/sortBar/sortBarSlice';
 import { selectSort } from '../../redux/sortBar/sortBarSelectors';
-import { E_Sort } from '../../types';
+import { E_Sort } from '../../types/E_Sort';
 
 const SortBar = React.memo(() => {
   const dispatch = useNotesManagerAppDispatch();
