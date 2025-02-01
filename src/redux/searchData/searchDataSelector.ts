@@ -12,3 +12,6 @@ export const selectFindedNotes = (state: RootState) => {
 
   return findedNotes;
 };
+
+export const selectSearchData = (state: RootState) =>
+  state.searchDataStore.searchData;
