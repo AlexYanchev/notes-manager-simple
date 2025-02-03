@@ -43,7 +43,7 @@ const NotesManager = () => {
   );
 
   return (
-    <section className='grid gap-4 grid-cols-[1fr_3fr] grid-rows-[1fr_5fr] h-screen	'>
+    <section className='grid gap-4 grid-cols-1 grid-rows-[1fr_5fr] h-screen	'>
       <AppBar position='static' sx={{ marginBottom: 10 }}>
         <Toolbar>
           <Typography variant='h4' component='h1'>
