@@ -17,6 +17,12 @@ import { setNotes } from '../../redux/notes/notesSlice';
 import SearchResult from '../SearchResult/SearchResult';
 import { useStorageNoteManagerContext } from '../../contexts/StorageProvider';
 import SortBar from '../SortBar/SortBar';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const NotesManager = () => {
   const searchData = useNotesManagerAppSelector(selectSearchData);
@@ -38,9 +44,15 @@ const NotesManager = () => {
 
   return (
     <section className='grid gap-4 grid-cols-[1fr_3fr] grid-rows-[1fr_5fr] h-screen	'>
-      <h1 className='col-span-2'>Менеджер заметок</h1>
+      <AppBar position='static' sx={{ marginBottom: 10 }}>
+        <Toolbar>
+          <Typography variant='h4' component='h1'>
+            Менеджер заметок
+          </Typography>
+          <SearchNotes onSearchNote={onSearchNote} />
+        </Toolbar>
+      </AppBar>
       <div className='grid grid-cols-1 grid-rows-[auto_1fr] gap-14'>
-        <SearchNotes onSearchNote={onSearchNote} />
         <AddNoteForm />
       </div>
       {searchData.open ? (
