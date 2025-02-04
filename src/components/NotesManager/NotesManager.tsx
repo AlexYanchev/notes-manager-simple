@@ -20,6 +20,8 @@ import SortBar from '../SortBar/SortBar';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid2';
+import Container from '@mui/material/Container';
 
 const NotesManager = () => {
   const searchData = useNotesManagerAppSelector(selectSearchData);
@@ -40,7 +42,7 @@ const NotesManager = () => {
   );
 
   return (
-    <section className='grid gap-4 grid-cols-1 grid-rows-[1fr_5fr] h-screen	'>
+    <section className=''>
       <AppBar position='static' sx={{ marginBottom: 10 }}>
         <Toolbar className='flex justify-between'>
           <Typography variant='h4' component='h1'>
@@ -49,18 +51,24 @@ const NotesManager = () => {
           <SearchNotes onSearchNote={onSearchNote} />
         </Toolbar>
       </AppBar>
-      <div className='grid grid-cols-1 grid-rows-[auto_1fr] gap-14'>
-        <AddNoteForm />
-      </div>
-      {searchData.open ? (
-        <SearchResult />
-      ) : (
-        <div className='grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-3'>
-          <CategoriesBar />
-          <SortBar />
-          <NoteList list={activeNotes} />
-        </div>
-      )}
+      <Container maxWidth='xl'>
+        <Grid container spacing={2} columns={{ md: 12, xl: 12, sm: 8, xs: 8 }}>
+          <Grid size={{ xl: 4, md: 4, sm: 8, xs: 8 }}>
+            <AddNoteForm />
+          </Grid>
+          <Grid size={{ xl: 8, md: 8, sm: 8, xs: 8 }}>
+            {searchData.open ? (
+              <SearchResult />
+            ) : (
+              <div className='grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-3'>
+                <CategoriesBar />
+                <SortBar />
+                <NoteList list={activeNotes} />
+              </div>
+            )}
+          </Grid>
+        </Grid>
+      </Container>
     </section>
   );
 };

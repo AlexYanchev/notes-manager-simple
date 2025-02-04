@@ -33,7 +33,9 @@ const SearchNotes: FC<SearchNotesProps> = ({ onSearchNote }) => {
           placeholder='Поиск...'
         />
 
-        <Button variant='contained'>Поиск</Button>
+        <Button variant='contained' type='submit'>
+          Поиск
+        </Button>
       </Stack>
     </form>
   );
