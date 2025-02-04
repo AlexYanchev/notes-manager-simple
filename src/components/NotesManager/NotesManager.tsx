@@ -20,9 +20,6 @@ import SortBar from '../SortBar/SortBar';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
 const NotesManager = () => {
   const searchData = useNotesManagerAppSelector(selectSearchData);
@@ -45,7 +42,7 @@ const NotesManager = () => {
   return (
     <section className='grid gap-4 grid-cols-1 grid-rows-[1fr_5fr] h-screen	'>
       <AppBar position='static' sx={{ marginBottom: 10 }}>
-        <Toolbar>
+        <Toolbar className='flex justify-between'>
           <Typography variant='h4' component='h1'>
             Менеджер заметок
           </Typography>

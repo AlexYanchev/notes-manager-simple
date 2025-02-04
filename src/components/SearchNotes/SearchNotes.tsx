@@ -1,6 +1,9 @@
 // SearchNotes.tsx
 
 import React, { FC } from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
 
 interface SearchNotesProps {
   onSearchNote: (value: string) => void;
@@ -21,14 +24,17 @@ const SearchNotes: FC<SearchNotesProps> = ({ onSearchNote }) => {
 
   return (
     <form onSubmit={onSubmit} className='flex'>
-      <input
-        className='border-2 border-solid border-black w-full'
-        type='search'
-        name='search'
-      />
-      <button className='border-2 border-solid border-black' type='submit'>
-        Поиск
-      </button>
+      <Stack spacing={2} direction='row'>
+        <TextField
+          name='search'
+          type='search'
+          variant='outlined'
+          sx={{ backgroundColor: 'white' }}
+          placeholder='Поиск...'
+        />
+
+        <Button variant='contained'>Поиск</Button>
+      </Stack>
     </form>
   );
 };
