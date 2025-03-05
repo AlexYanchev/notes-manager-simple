@@ -41,6 +41,28 @@ const NotesManager = () => {
     [dispatch]
   );
 
+  // const test = () => {
+  //   const str = 'AAAABBBCCXYZDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBB';
+  //   let result = '';
+  //   let temp = 1;
+  //   for (let i = 0; i < str.length; i++) {
+  //     if (str[i] !== str[i + 1]) {
+  //       if (temp !== 1) {
+  //         result += str[i] + temp;
+  //         temp = 1;
+  //       } else {
+  //         result += str[i];
+  //       }
+  //     } else {
+  //       temp += 1;
+  //     }
+  //   }
+
+  //   return result;
+  // };
+
+  // console.log(test());
+
   return (
     <section className=''>
       <AppBar position='static' sx={{ marginBottom: 10 }}>
